@@ -1,0 +1,70 @@
+@keyframes reposity-animation{
+    0%{
+        box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, .5);
+    }
+    100%{
+        box-shadow: 0px 0px 0px 30px rgba(0, 0, 0, 0);
+    }
+}
+
+section{
+    margin-bottom: 50px;
+    margin-left: 50px;
+}
+
+i{
+    cursor: pointer;
+}
+
+#content{
+    margin-top: 70px;
+}
+
+
+i.heading-icon{
+    display: inline-block;
+    width: 3rem;
+    height: 3rem;
+    line-height: 3rem;
+    margin-right: 1rem;
+   
+    text-align: center;
+    font-size: 2rem;
+    border-radius: 40%;
+    color: #fff;
+}
+
+#reposity{
+    margin-top: 80px;
+}
+#reposity .animation-cycle{
+    width: 200px;
+    height: 200px;
+    font-size: 2rem;
+    animation: reposity-animation 1s infinite;
+}
+
+#reposity a:hover{
+    text-decoration: none;
+}
+
+@media(min-width: 992px){
+    #navbar1{     
+        width: 20rem;
+        height: 100vh;
+    }
+
+    #nav1 a{
+        font-size: 1.2rem;
+    }
+
+    #content{
+        margin-left: 20rem;
+        margin-top: 0;  /* remove */
+    }
+
+    #date{
+        min-width: 15rem;
+        text-align: right;
+    }
+}
