@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/nav.css">
+  <link rel="stylesheet" href="css/document.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+  <span class="nav">&#9776; 导航</span>
+  <div class="overlay">
+    <span class="close">&times;</span>
+    <div class="content">
+      <a href="index.html" class="text">首 页</a>
+      <a href="document.html" class="text mt">文 档</a>
+      <a href="note.html" class="text mt">笔 记</a>
+    </div>
+  </div>
+
+
+  <div id="app">
+    <!-- search -->
+    <div class="search">
+      <input type="search" name="search" id="search" placeholder="      文档搜索..." @input="changeDoc"
+        v-model="searchResult">
+      <button @click="changeDoc"><i class="fa fa-search"></i></button>
+    </div>
+    <!-- list -->
+    <div class="list">
+      <div class="card" v-for="doc in docs">
+        <a :href="doc.href" target="_blank">
+          <img :src="doc.src" alt="">
+          <span>{{doc.title}}</span>
+        </a>
+      </div>
+    </div>
+    <!-- app end -->
+  </div>
+
+  <script src="js/nav.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+  <script src="js/document.js"></script>
+</body>
+
+</html>
